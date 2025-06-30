@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
-</head>
-<body>
+ </head>
+ <body>
      <nav class="navbar navbar-expand-lg  ">
-  <div class="container-fluid  navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-    <a class="navbar-brand d-flex align-items-center gap-2 text-white p-3" href="#">
+       <div class="container-fluid  navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+     <a class="navbar-brand d-flex align-items-center gap-2 text-white p-3" href="#">
       <img src="css/img/duck.png" alt="Logo" width="65" height="55">
       <span>Catalogo Libri</span>
-    </a>
+     </a>
     
-    <div class="collapse navbar-collapse text-white" id="navbarNav">
+     <div class="collapse navbar-collapse text-white" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
         <li class="nav-item"><a class="nav-link" href="#">Anagrafica Utenti</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Storico Prestiti</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
-        <button class="btn btn-outline-secondary" type="submit">Cerca</button>
-      </form>
-    </div>
-  </div>
+      
+     </div>
+     </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
-    </button>
- </nav>
- <div class="container bg-white p-5 rounded shadow-sm">
-    <h2 class="mb-4">Nuovo Libro</h2>
+     </button>
+     </nav>
+
+     <div class="container bg-white p-5 rounded shadow-sm">
+       <h2 class="mb-4">Nuovo Libro</h2>
      <!--col-autori-->
-    <div class="row mb-3">
-        <div class="col-md-6">
+       <div class="row mb-3">
+         <div class="col-md-6">
             <label for="Nomeautore" class="form-label">Nome Autore</label>
             <input type="text" class="form-control" id="nomeAutore" placeholder="Inserisci il nome dell'autore">
-        </div>
+         </div>
          <div class="col-md-6">
           <label for="cognomeAutore" class="form-label">Cognome Autore</label>
           <input type="text" class="form-control" id="cognomeAutore" placeholder="Inserisci il cognome dell'autore">
 
+         </div>
         </div>
-    
-        
-    </div>
 
-    <!--col-titolo-->
-    <div class="mb-2">
-        <label for="Titolo" class="form label">Titolo</label>
+     <!--col-titolo-->
+     <div class="mb-2">
+        <label for="Titolo" class="form-label">Titolo</label>
         <input type="text" class="form-control" id="titolo" placeholder="Inserisci il titolo del libro">
         <div class="form-text">Titolo versione italianas</div>
       </div>
+     </div>
 
-    </div>
-           <!---col-info-->
-     <div class="row mb-3">
-        <div class="col-md-4">
-          <label for="genere" class="form-label">Genere</label>
-           <select class="form-select" id="inputGroupSelect01">
-            <option selected>Scegli il genere</option>
-            <option>Psicologia</option>
-            <option>Scienze</option>
-            <option>Informatica</option>
-            </select>
-        
-        </div>
-        <div class="col-md-4">
+      <!---col-info-->
+    <div class="container">
+      <hr>
+      <div class="row mb-3">
+            <div class="col-md-4">
+             <label for="genere" class="form-label">Genere</label>
+              <select class="form-select" id="genere">
+                <option selected>Scegli il genere</option>
+                <option value="psicologia">Psicologia</option>
+                <option value="scienze">Scienze</option>
+                <option value="informatica">Informatica</option>
+               </select>
+            </div>
+        <div class="col-12 col-lg-4 mb-2">
           <label for="anno" class="form-label">Anno di Pubblicazione</label>
           <input type="text" class="form-control" id="anno" placeholder="Inserisci l'anno">
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-lg-4 mb-2 ">
           <label for="isbn" class="form-label">ISBN#</label>
           <input type="text" class="form-control" id="isbn" placeholder="Inserisci il codice ISBN#">
+          
         </div>
      </div>
-      <hr>
       
+    </div> 
+       
+    
+
+     <!--col-note-->
+    <div class="container">
+      
+      <div class="mb-3">
+        <label for="note" class="form-label">Note</label>
+        <textarea class="form-control" name="note" rows="3" placeholder="Inserisci eventuali note sul libro"></textarea>
+       
+      </div>
+
+        <div class="form-check mb-4 my-4">
+          <input class="form-check-input" type="checkbox" id="digitale">
+          <label class="form-check-label" for="digitale">Disponibile anche in digitale</label>
+        </div>
+
+       <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+      </form>
+     </div>
     </div>
 
 
-     <!--col-note-->
-      <div class="mb-3">
-        <label for="note" class="form-label">Note</label>
-        <textarea class="form-control" id="note" rows="3" placeholder="Inserisci eventuali note sul libro"></textarea>
-      </div>
+
+
 
 
    
@@ -95,7 +110,7 @@
 
   
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   
-</body>
+    </body>
 </html>
